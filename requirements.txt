@@ -1,0 +1,8 @@
+seaborn
+pandas
+numpy
+scikit-learn
+matplotlib
+umap
+bokeh
+streamlit
