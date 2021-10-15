@@ -1,8 +1,9 @@
 seaborn
 pandas
-numpy
-scikit-learn
-matplotlib
-umap
 bokeh
 streamlit
+scikit-learn
+matplotlib
+numpy<=1.20
+numba
+umap-learn
