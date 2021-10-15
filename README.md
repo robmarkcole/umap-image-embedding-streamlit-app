@@ -8,4 +8,4 @@ Umap depends on numba which itself uses a pinned version of numpy. This dependen
 * `python3 -m venv venv`
 * `source venv/bin/activate`
 * `pip install -r requirements.txt`
-* `pip install jupyterlab`
+* `pip install jupyterlab` for dev or `streamlit run app.py` for the app
