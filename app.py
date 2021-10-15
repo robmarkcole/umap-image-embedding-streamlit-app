@@ -9,7 +9,6 @@ from PIL import Image
 import base64
 
 from bokeh.plotting import figure, output_file, save
-from bokeh.plotting import figure, show, output_notebook
 from bokeh.models import HoverTool, ColumnDataSource, CategoricalColorMapper
 from bokeh.palettes import Spectral10
 
@@ -27,9 +26,6 @@ embedding = np.load('embedding.npy')
 digits_df = pd.DataFrame(embedding, columns=('x', 'y'))
 digits_df['digit'] = [str(x) for x in digits.target]
 digits_df['image'] = list(map(embeddable_image, digits.images))
-
-if st.checkbox('Show data table'):
-    st.dataframe(digits_df)
 
 ## Generate bokeh plot
 datasource = ColumnDataSource(digits_df)
@@ -76,3 +72,6 @@ with open(HTML_FILE, "rb") as file:
         file_name=HTML_FILE,
         mime='text/html'
     )
+
+if st.checkbox('Show data table'):
+    st.dataframe(digits_df)
